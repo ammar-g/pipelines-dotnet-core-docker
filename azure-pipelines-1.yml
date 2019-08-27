@@ -20,7 +20,6 @@ stages:
     pool:
       vmImage: 'ubuntu-16.04'
     steps:
-    steps:
       - script: docker login -u $(dockerId) -p $(pswd)
       - script: docker build -t $(dockerId)/$(imageName) .  # add options to this command to meet your needs
       - task: Docker@2
