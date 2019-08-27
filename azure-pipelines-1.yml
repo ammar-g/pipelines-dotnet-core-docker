@@ -21,7 +21,7 @@ stages:
       vmImage: 'ubuntu-16.04'
     steps:
     steps:
-      - script: docker login -u $(dockerId) -p $(pswd) https://hub.docker.com/
+      - script: docker login -u $(dockerId) -p $(pswd)
       - script: docker build -t $(dockerId)/$(imageName) .  # add options to this command to meet your needs
       - task: Docker@2
         displayName: Build an image
